@@ -1,2 +1,5 @@
 # Project exclude paths
 /mybaties01/target/
+/mybaties01/src/main/resources/mybatis-config.properties
+/.idea/
+.gitignore
