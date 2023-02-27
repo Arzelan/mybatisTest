@@ -4,7 +4,7 @@
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <properties resource="mybatis-config.properties"/>
-<!--  mybatis-config.properties 模板
+<!--  mybatis-config.properties template
 driver=com.mysql.cj.jdbc.Driver
 url=jdbc:mysql://ip:3306/zxntest?useSSL=false&useUnicode=true&characterEncoding=utf8
 username=root
@@ -14,7 +14,7 @@ password=root
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-<!--                url在xml里的&符号需要用&amp;   在properties里直接使用&符号即可。-->
+<!--                url in xml & need  use &amp   in properties use &-->
 <!--                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>-->
 <!--                <property name="url" value="jdbc:mysql://127.0.0.1:3407/zxntest?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8"/>-->
 <!--                <property name="username" value="root"/>-->
@@ -27,6 +27,8 @@ password=root
         </environment>
     </environments>
     <mappers>
-        <mapper resource="cc/xdev/dao/UserMapper.xml"/>
+<!--        <mapper resource="cc/xdev/dao/UserMapper.xml"/>-->
+<!--                <mapper class="cc.xdev.dao.UserMapper"/>-->
+                <mapper url="file:///D:\MyProjects\mybaties01\src\main\java\cc\xdev\dao\UserMapper.xml"/>
     </mappers>
 </configuration>
